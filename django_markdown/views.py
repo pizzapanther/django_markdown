@@ -1,9 +1,10 @@
 """ Supports preview. """
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 
 from . import settings
 
-
+@csrf_exempt
 def preview(request):
     """ Render preview page.
 
